@@ -37,4 +37,9 @@ public class PassageiroServiceImpl implements PassageiroService {
     public void excluirPassageiro(Long id) {
         passageiroRepository.deleteById(id);
     }
+
+    @Override
+    public Passageiro login(String usuario, String senha) {
+        return passageiroRepository.findByUsuarioAndSenha(usuario, senha);
+    }
 }

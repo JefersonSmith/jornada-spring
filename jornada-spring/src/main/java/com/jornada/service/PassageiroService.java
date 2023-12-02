@@ -9,4 +9,5 @@ public interface PassageiroService {
     List<Passageiro> listarPassageiros();
     Passageiro obterPassageiroPorId(Long id);
     void excluirPassageiro(Long id);
+    Passageiro login(String usuario, String senha);
 }
