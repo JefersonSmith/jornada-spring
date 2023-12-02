@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Senha</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/senha.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="text-center mb-4">Recuperação de Senha</h2>
+                <form id="recovery-form">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-block mt-4 botao-laranja rounded-0 border-0">Enviar Link de Recuperação</button>
+                </form>
+                <p class="confirmation-message" id="confirmation-message">Email de recuperação enviado com sucesso!</p>
+                <p class="text-center mt-3">
+                    <a href="login.html">Voltar para o Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Mensagem de Confirmação
+        document.getElementById('recovery-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('email');
+            const confirmationMessage = document.getElementById('confirmation-message');
+
+            // Validando o formato do email
+            function isValidEmail(email) {
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return emailPattern.test(email);
+            }
+
+            // Confirmando se o email é válido
+            if (isValidEmail(emailInput.value)) {
+                confirmationMessage.style.display = 'block';
+            } else {
+                alert('Por favor, insira um email válido.');
+            }
+        });
+    </script>
+</body>
+</html>

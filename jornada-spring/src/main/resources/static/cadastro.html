@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+
+</head>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="text-center mb-4">Cadastre-se</h2>
+            <form id="registration-form" onsubmit="return validarCadastro()">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
+                    <label for="confirmarEmail">Confirme o Email:</label>
+                    <input type="email" class="form-control" id="confirmarEmail" placeholder="Confirme seu email" required>
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
+                    <label for="confirmarSenha">Confirme a Senha:</label>
+                    <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirme sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-dark btn-block mt-4 botao-laranja rounded-0 border-0">Confirme seu cadastro</button>
+            </form>
+            <!-- Mensagem de confirmação após o envio -->
+            <p class="confirmation-message" id="confirmation-message" style="display: none;">Cadastro realizado com sucesso!</p>
+            <p class="text-center mt-3">
+                <a href="login.html">Voltar para o Login</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function validarCadastro() {
+        var email = document.getElementById('email').value;
+        var confirmarEmail = document.getElementById('confirmarEmail').value;
+        var senha = document.getElementById('senha').value;
+        var confirmarSenha = document.getElementById('confirmarSenha').value;
+
+        if (email !== confirmarEmail) {
+            alert('Os campos de email não coincidem. Por favor, verifique.');
+            return false;
+        }
+
+        if (senha !== confirmarSenha) {
+            alert('Os campos de senha não coincidem. Por favor, verifique.');
+            return false;
+        }
+
+        // Exibir a mensagem de confirmação após o envio do formulário
+        document.getElementById('confirmation-message').style.display = 'block';
+
+        // Limpar os campos do formulário após o cadastro bem-sucedido
+        document.getElementById('nome').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('confirmarEmail').value = '';
+        document.getElementById('senha').value = '';
+        document.getElementById('confirmarSenha').value = '';
+
+        // Impedir o envio padrão do formulário
+        return false;
+    }
+</script>
+
+    
+</body>
+
+</html>
