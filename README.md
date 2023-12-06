@@ -7,8 +7,6 @@ Sumário
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
 
-# Jornada
-
 <h1 align="center"> Jornada | Agência de Viagens | Recode Pro 2023 </h1>
 Bem-vindo à Agência de Viagens Jornada - O seu portal para experiências extraordinárias!
 
