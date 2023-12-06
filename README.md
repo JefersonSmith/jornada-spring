@@ -4,6 +4,7 @@ Bem-vindo ao projeto da Agência de Viagens Jornada, uma aplicação web desenvo
 
 
 # 📁 Acesso ao projeto
+Será necessário criar um banco no MySql com nome: jornada_spring
 Após rodar a aplicação, o projeto pode ser acessado diretamente pelo link fornecido abaixo:
 
 http://localhost:8080/
