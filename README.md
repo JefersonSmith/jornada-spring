@@ -2,10 +2,17 @@ Bem-vindo ao projeto da Agência de Viagens Jornada, uma aplicação web desenvo
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
-Sumário
-- [Jornada](#jornada)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
+# 📁 Acesso ao projeto
+Após rodar a aplicação, o projeto pode ser acessado diretamente pelo link fornecido abaixo:
+
+http://localhost:8080/
+
+E o nosso sistema administrativo com o CRUD pode ser acessado pelo link:
+
+http://localhost:8080/listarPassageiros
+
+ou pode ser acessado através de um login e senha criados no menu de cadastro.
 
 <h1 align="center"> Jornada | Agência de Viagens | Recode Pro 2023 </h1>
 Bem-vindo à Agência de Viagens Jornada - O seu portal para experiências extraordinárias!
