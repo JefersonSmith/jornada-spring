@@ -2,10 +2,7 @@ Bem-vindo ao projeto da Agência de Viagens Jornada, uma aplicação web desenvo
 
 Sumário
 
-- <a href="# acesso">Tecnologias Utilizadas</a>
-
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-
 
 
 <h1 align="center"> Jornada | Agência de Viagens | Recode Pro 2023 </h1>
