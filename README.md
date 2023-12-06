@@ -30,7 +30,7 @@ O Que Nos Torna Especiais
 
 
 
-# Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - Java Spring Boot
 - MySql
 - Spring MVC
