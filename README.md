@@ -7,9 +7,10 @@ Sumário
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
 
+# Jornada
 
 <h1 align="center"> Jornada | Agência de Viagens | Recode Pro 2023 </h1>
-# Bem-vindo à Agência de Viagens Jornada - O seu portal para experiências extraordinárias!
+Bem-vindo à Agência de Viagens Jornada - O seu portal para experiências extraordinárias!
 
 Na Jornada, entendemos que cada viagem é mais do que uma simples jornada de A para B; é uma oportunidade de explorar, descobrir e criar memórias duradouras. Nossa missão é oferecer a você não apenas destinos deslumbrantes, mas uma verdadeira jornada de descobertas.
 O Que Nos Torna Especiais
