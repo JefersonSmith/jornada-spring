@@ -3,6 +3,7 @@ package com.jornada.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -79,10 +80,14 @@ public class PassageiroController {
 
     @GetMapping("/{id}/excluirPassageiro")
     public ModelAndView excluirPassageiro(@PathVariable Long id) {
-        passageiroService.excluirPassageiro(id);
-        ModelAndView modelAndView = new ModelAndView("redirect:/listarPassageiros");
-
-        return modelAndView;
+        try {
+            passageiroService.excluirPassageiro(id);
+            return new ModelAndView("redirect:/listarPassageiros");
+        } catch (DataIntegrityViolationException e) {
+            ModelAndView modelAndView = new ModelAndView("erroExclusaoPassageiro");
+            modelAndView.addObject("mensagem", "Não é possível excluir o passageiro. Ele está vinculado a uma ou mais viagens.");
+            return modelAndView;
+        }
     }
 
     @RequestMapping("/listarPassageiros")

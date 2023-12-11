@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Erro na Exclusão do Passageiro</title>
+</head>
+<body>
+
+<div>
+    <h2>Ocorreu um erro ao excluir o passageiro</h2>
+    <p th:text="${mensagem}"></p>
+    <p>
+        <a th:href="@{/listarPassageiros}">Voltar para a lista de passageiros</a>
+    </p>
+</div>
+
+</body>
+</html>
