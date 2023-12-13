@@ -13,7 +13,6 @@
   <nav class="navbar navbar-light bg-light">
     <div class="container justify-content-start">
       <a class="navbar-brand" href="/listarPassageiros">Passageiros</a>
-      <!-- Add more links or customize as needed -->
     </div>
   </nav>
  
@@ -35,6 +34,16 @@
           <div class="mb-3">
             <label for="idade" class="form-label">Idade</label>
             <input type="text" class="form-control" id="idade" th:field="*{idade}">
+          </div>
+
+          <div class="mb-3">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="cpf" th:field="*{cpf}">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" th:field="*{email}">
           </div>
 
           <div class="mb-3">

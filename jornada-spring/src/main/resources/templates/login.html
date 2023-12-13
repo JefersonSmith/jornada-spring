@@ -70,7 +70,6 @@
             <div class="card-body">
                 <h2 class="text-center mb-4">Login</h2>
 
-                <!-- Adicione esta div para exibir mensagens de erro -->
                 <div th:if="${param.error}" class="alert alert-danger" role="alert">
                     Usuário ou senha inválidos.
                 </div>
@@ -91,12 +90,10 @@
                     <a href="senha.html">Esqueceu a senha?</a> | <a href="cadastro.html">Cadastre-se aqui</a>
                 </p>
 
-<!-- Exibir mensagem de erro -->
 <div th:if="${mensagemErro}" class="alert alert-danger" role="alert">
     <span th:text="${mensagemErro}"></span>
 </div>
 
-                <!-- Botão de Login com a Conta do Google -->
                 <div class="text-center mt-4">
                     <div class="g-signin2" data-onsuccess="onSignIn"></div>
                 </div>
@@ -112,9 +109,9 @@
     <script>
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
-            console.log('ID: ' + profile.getId()); // ID do usuário
-            console.log('Nome: ' + profile.getName()); // Nome do usuário
-            console.log('Email: ' + profile.getEmail()); // Email do usuário
+            console.log('ID: ' + profile.getId()); 
+            console.log('Nome: ' + profile.getName()); 
+            console.log('Email: ' + profile.getEmail()); 
         }
     </script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>

@@ -28,17 +28,24 @@ public class Passageiro {
     @Column(nullable = false)
     private String senha;
 
+    @Column(nullable = false, unique = true)
+    private String cpf;
+
+    @Column(nullable = false, unique = true)
+    private String email;
+
     public Passageiro() {
     }
 
-    public Passageiro(String nome, int idade, String usuario, String senha) {
+    public Passageiro(String nome, int idade, String usuario, String senha, String cpf, String email) {
         this.nome = nome;
         this.idade = idade;
         this.usuario = usuario;
         this.senha = senha;
+        this.cpf = cpf;
+        this.email = email;
     }
-
-    // Getters and Setters
+    
 
     public Long getId() {
         return id;
@@ -80,9 +87,25 @@ public class Passageiro {
         this.senha = senha;
     }
 
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, idade, usuario, senha);
+        return Objects.hash(id, nome, idade, usuario, senha, cpf, email);
     }
 
     @Override
@@ -94,7 +117,9 @@ public class Passageiro {
                 Objects.equals(id, passageiro.id) &&
                 Objects.equals(nome, passageiro.nome) &&
                 Objects.equals(usuario, passageiro.usuario) &&
-                Objects.equals(senha, passageiro.senha);
+                Objects.equals(senha, passageiro.senha) &&
+                Objects.equals(cpf, passageiro.cpf) &&
+                Objects.equals(email, passageiro.email);
     }
 
     @Override
@@ -105,6 +130,8 @@ public class Passageiro {
                 ", idade=" + idade +
                 ", usuario='" + usuario + '\'' +
                 ", senha='" + senha + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

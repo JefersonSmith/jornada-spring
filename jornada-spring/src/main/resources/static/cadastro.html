@@ -19,18 +19,15 @@
                     <div class="form-group">
                         <label for="nome">Nome:</label>
                         <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
-                        <!-- Adicionando os campos do novo formulário -->
                         <label for="idade">Idade:</label>
                         <input type="number" class="form-control" id="idade" name="idade" placeholder="Digite sua idade" required>
                         <label for="usuario">Usuário:</label>
                         <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Digite seu usuário" required>
                         <label for="senha">Senha:</label>
                         <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
-                        <!-- Fim das adições -->
                     </div>
                     <button type="submit" class="btn btn-dark btn-block mt-4 botao-laranja rounded-0 border-0">Confirme seu cadastro</button>
                 </form>
-                <!-- Mensagem de confirmação após o envio -->
                 <p class="confirmation-message" id="confirmation-message" style="display: none;">Cadastro realizado com sucesso!</p>
                 <p class="text-center mt-3">
                     <a href="login">Voltar para o Login</a>
@@ -56,17 +53,14 @@
                 return false;
             }
 
-            // Exibir a mensagem de confirmação após o envio do formulário
             document.getElementById('confirmation-message').style.display = 'block';
 
-            // Limpar os campos do formulário após o cadastro bem-sucedido
             document.getElementById('nome').value = '';
             document.getElementById('email').value = '';
             document.getElementById('confirmarEmail').value = '';
             document.getElementById('senha').value = '';
             document.getElementById('confirmarSenha').value = '';
 
-            // Impedir o envio padrão do formulário
             return false;
         }
     </script>
