@@ -36,14 +36,3 @@ O Que Nos Torna Especiais
 
 
 
-# Tecnologias Utilizadas
-- Java Spring Boot
-- MySql
-- Spring MVC
-
-# 📁 Banco de dados
--Temos uma entidade para armazenar os dados cadastrais dos nossos passageiros<br>
--Uma entidade para armazenar os dados cadastrais dos nossos destinos<br>
--Uma entidade para cadastrar as nossas passagens vendidas.<br>
-![conceitual](https://github.com/JefersonSmith/jornada-java/assets/123952270/cba8c3f2-171b-4773-9c04-783149181bcc)
-  
