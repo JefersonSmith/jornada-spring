@@ -67,41 +67,6 @@ public class ViagemController {
         return modelAndView;
     }
 
-    @GetMapping("/{id}/editarViagem")
-    public ModelAndView editarViagem(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("editarViagem");
-
-        Viagem viagem = viagemService.obterViagemPorId(id);
-        List<Destino> destinos = destinoService.listarDestinos();
-        List<Passageiro> passageiros = passageiroService.listarPassageiros();
-
-        modelAndView.addObject("viagem", viagem);
-        modelAndView.addObject("destinos", destinos);
-        modelAndView.addObject("passageiros", passageiros);
-
-        return modelAndView;
-    }
-
-    @PostMapping("/{id}/editarViagem")
-    public ModelAndView editarViagem(Viagem viagem,
-                                     @RequestParam("idDestino") Long idDestino,
-                                     @RequestParam("idPassageiro") Long idPassageiro,
-                                     @RequestParam("dataHoraIda") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataHoraIda,
-                                     @RequestParam("dataHoraVolta") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataHoraVolta) {
-        ModelAndView modelAndView = new ModelAndView("redirect:/listarViagens");
-
-        Destino destino = destinoService.obterDestinoPorId(idDestino);
-        Passageiro passageiro = passageiroService.obterPassageiroPorId(idPassageiro);
-
-        viagem.setDestino(destino);
-        viagem.setPassageiro(passageiro);
-        viagem.setDataHoraIda(dataHoraIda);
-        viagem.setDataHoraVolta(dataHoraVolta);
-
-        viagemService.salvarViagem(viagem);
-
-        return modelAndView;
-    }
 
     @GetMapping("/{id}/excluirViagem")
     public ModelAndView excluirViagem(@PathVariable Long id) {

@@ -83,9 +83,7 @@
 					        <td th:text="${#temporals.format(viagem.dataHoraIda, 'dd/MM/yyyy HH:mm')}"></td>
 					        <td th:text="${#temporals.format(viagem.dataHoraVolta, 'dd/MM/yyyy HH:mm')}"></td>
 					        <td>
-					            <a th:href="@{/{id}/editarViagem (id=${viagem.id})}" class="btn btn-warning">
-					                Editar
-					            </a>
+
 					            <a th:href="@{/{id}/excluirViagem (id=${viagem.id})}" class="btn btn-danger"
 					                onclick="return confirm('Tem certeza que deseja excluir a viagem?');">
 					                Excluir
