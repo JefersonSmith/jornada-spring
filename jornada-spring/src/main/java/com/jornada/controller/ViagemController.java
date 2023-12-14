@@ -52,7 +52,7 @@ public class ViagemController {
                                         @RequestParam("idPassageiro") Long idPassageiro,
                                         @RequestParam("dataHoraIda") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataHoraIda,
                                         @RequestParam("dataHoraVolta") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataHoraVolta) {
-        ModelAndView modelAndView = new ModelAndView("redirect:/sucesso");
+        ModelAndView modelAndView = new ModelAndView("redirect:/listarViagens");
 
         Destino destino = destinoService.obterDestinoPorId(idDestino);
         Passageiro passageiro = passageiroService.obterPassageiroPorId(idPassageiro);

@@ -31,7 +31,7 @@ public class DestinoController {
 
     @PostMapping("/cadastrarDestino")
     public ModelAndView cadastrarDestino(Destino destino) {
-        ModelAndView modelAndView = new ModelAndView("redirect:/sucesso");
+        ModelAndView modelAndView = new ModelAndView("redirect:/listarDestinos");
 
         destinoService.salvarDestino(destino);
 
